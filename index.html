@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -44,8 +45,41 @@
         </ul>
     </section>
 
+    <section id="comments">
+        <h2>Відгуки</h2>
+        <ul id="comments-list">
+        </ul>
+    </section>
+
     <footer>
         <p>&copy; 2025 Максим Янчинський</p>
+        <div id="browser-info"></div>
     </footer>
+
+    <button id="theme-toggle" class="theme-toggle-btn">Перемкнути тему</button>
+
+    <div id="feedback-modal" class="hidden">
+        <div class="modal-content">
+            <h2>Форма зворотного зв'язку</h2>
+            <form action="https://formspree.io/f/mkgrbeyq" method="POST">
+                <label for="name">Ім’я</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Повідомлення</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Відправити</button>
+            </form>
+            <button id="close-modal" class="close-btn">Закрити</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
